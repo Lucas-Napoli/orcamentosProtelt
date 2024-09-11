@@ -48,9 +48,8 @@ export default function HistoryScreen({ navigation }) {
 
   useEffect(() => {
     const loadData = async () => {
-      // Simula uma requisição de dados ou inicialização do app
       setTimeout(() => {
-        setIsLoading(false); // Após 3 segundos, desativa a tela de carregamento
+        setIsLoading(false); // Após 2 segundos, desativa a tela de carregamento
       }, 2000);
     };
 

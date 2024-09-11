@@ -19,14 +19,14 @@ const produtos = [
 {id:	11,	nome:	'PLACA CEGA P/CONDULETE 1/2 - 3/4'	,	preco:	5.18	,	quantidade: 	0	,	metro:	0	,	hasMetro:	false	,	img:require('../src/images/placa cega.jpg')	},
 {id:	12,	nome:	'PLACA CEGA P/CONDULETE 1POL'	,	preco:	7.82	,	quantidade: 	0	,	metro:	0	,	hasMetro:	false	,	img:require('../src/images/placa cega 1.jpg')	},
 {id:	13,	nome:	'TAMPAO PVC 1'	,	preco:	1.08	,	quantidade: 	0	,	metro:	0	,	hasMetro:	false	,	img:require('../src/images/tampao 1.jpeg')	},
-{id:	14,	nome:	'TAMPAO PVC 3/4'	,	preco:	0.94	,	quantidade: 	0	,	metro:	0	,	hasMetro:	true	,	img:require('../src/images/tampao 34.jpg')	},
+{id:	14,	nome:	'TAMPAO PVC 3/4'	,	preco:	0.94	,	quantidade: 	0	,	metro:	0	,	hasMetro:	false	,	img:require('../src/images/tampao 34.jpg')	},
 {id:	15,	nome:	'CANALETA PLASTICA 30X30 CINZA ABERTA'	,	preco:	21.01	,	quantidade: 	0	,	metro:	0	,	hasMetro:	true	,	img:require('../src/images/canaleta 30.jpeg')	},
 {id:	16,	nome:	'CANALETA SISTEMA 20X10'	,	preco:	5.38	,	quantidade: 	0	,	metro:	0	,	hasMetro:	true	,	img:require('../src/images/canaleta 2010.png')	},
 {id:	17,	nome:	'MATA JUNTA COTOVELO 90 GRAUS'	,	preco:	1.99	,	quantidade: 	0	,	metro:	0	,	hasMetro:	false	,	img:require('../src/images/MATAJUNTA.jpeg')	},
 {id:	18,	nome:	'MATA JUNTA COTOVELO EXTERNO'	,	preco:	1.02	,	quantidade: 	0	,	metro:	0	,	hasMetro:	false	,	img:require('../src/images/matajunta ex.jpeg')	},
 {id:	19,	nome:	'MATA JUNTA COTOVELO INTERNO'	,	preco:	1.00	,	quantidade: 	0	,	metro:	0	,	hasMetro:	false	,	img:require('../src/images/matajunta in.jpeg')	},
 {id:	20,	nome:	'MATA JUNTA EM T'	,	preco:	1.21	,	quantidade: 	0	,	metro:	0	,	hasMetro:	false	,	img:require('../src/images/matajunta t.jpeg')	},
-{id:	21,	nome:	'MATA JUNTA LUVA'	,	preco:	1.62	,	quantidade: 	0	,	metro:	0	,	hasMetro:	true	,	img:require('../src/images/matajunta luva.jpg')	},
+{id:	21,	nome:	'MATA JUNTA LUVA'	,	preco:	1.62	,	quantidade: 	0	,	metro:	0	,	hasMetro:	false	,	img:require('../src/images/matajunta luva.jpg')	},
 {id:	22,	nome:	'TUBO/DUTO CORRUGADO EXTERNO 3/4 POL PEAD (KANAFLEX)'	,	preco:	5.49	,	quantidade: 	0	,	metro:	0	,	hasMetro:	true	,	img:require('../src/images/corrugado ex 34.jpeg')	},
 {id:	23,	nome:	'TUBO/DUTO CORRUGADO EXTERNO 1 POL PEAD (KANAFLEX)'	,	preco:	2.33	,	quantidade: 	0	,	metro:	0	,	hasMetro:	true	,	img:require('../src/images/corrugado 1.jpeg')	},
 {id:	24,	nome:	'CONDUITE EMBORRACHADO 1/2'	,	preco:	5.09	,	quantidade: 	0	,	metro:	0	,	hasMetro:	true	,	img:require('../src/images/CONDUITE EMBORRACHADO 1_2.jpg')	},
@@ -35,7 +35,7 @@ const produtos = [
 {id:	27,	nome:	'CONDUITE CORRUGADO AMARELO 1/2'	,	preco:	5.06	,	quantidade: 	0	,	metro:	0	,	hasMetro:	true	,	img:require('../src/images/amarelo 34.jpg')	},
 {id:	28,	nome:	'CONDUITE CORRUGADO AMARELO 3/4'	,	preco:	6.12	,	quantidade: 	0	,	metro:	0	,	hasMetro:	true	,	img:require('../src/images/amarelo 34.jpg')	},
 {id:	29,	nome:	'ROLDANA PARA POSTE'	,	preco:	7.00	,	quantidade: 	0	,	metro:	0	,	hasMetro:	false	,	img:require('../src/images/roldana.jpg')	},
-{id:	30,	nome:	'ABRACADEIRA/FITA AJUSTAVEL PARA POSTE'	,	preco:	4.11	,	quantidade: 	0	,	metro:	0	,	hasMetro:	false	,	img:require('../src/images/abracadeira poste.jpeg')	},
+{id:	30,	nome:	'ABRACADEIRA/FITA AJUSTAVEL PARA POSTE'	,	preco:	4.11	,	quantidade: 	0	,	metro:	0	,	hasMetro:	true	,	img:require('../src/images/abracadeira poste.jpeg')	},
 {id: 31, nome: 'CABO CAT5E U/UTP – CAPA SIMPLES', preco: 2.76, quantidade:0, metro:0, hasMetro:true, img:require('../src/images/utp.jpeg')},
 {id: 32, nome: 'ABRAÇADEIRA TIPO D C/ CUNHA 1/2', preco: 1.06, quantidade:0, metro:0, hasMetro:false, img:require('../src/images/abracadeira 12.jpeg')},
 {id: 33, nome: 'ABRAÇADEIRA TIPO D C/ CUNHA 3/4', preco: 1.06, quantidade:0, metro:0, hasMetro:false, img:require('../src/images/abracadeira 34.jpg')}
@@ -257,9 +257,17 @@ export default function OrcamentoScreen() {
           <Text>Quantos metros para {produtoSelecionado.nome}?</Text>
           <TextInput
             style={styles.metroInput}
-            keyboardType="numeric"
+            keyboardType="decimal-pad"
             value={metros.toString()}
-            onChangeText={(text) => setMetros(Number(text))}
+            onChangeText={(text) => {
+              // Permite digitação de números, ponto e vírgula
+              const sanitizedText = text.replace(',', '.');
+          
+              // Verifica se é um número válido ou um valor parcial com ponto
+              if (!isNaN(sanitizedText) || sanitizedText === '' || sanitizedText.endsWith('.')) {
+                setMetros(sanitizedText); // Atualiza o estado com a string
+              }
+            }}
           />
           <Button title="Confirmar" onPress={confirmarAdicionarProduto} />
         </View>

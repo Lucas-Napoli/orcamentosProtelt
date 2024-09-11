@@ -10,9 +10,6 @@ export default function OrcamentoList({ data, onEyePress }) {
                     <TouchableOpacity onPress={onEyePress}>
                         <Ionicons name='eye-sharp' size={40} color={'#FFF'} />
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Ionicons name='pencil-sharp' size={40} color={'#FFF'} />
-                    </TouchableOpacity>
                 </View>
             </View>
         </View>
