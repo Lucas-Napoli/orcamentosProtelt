@@ -36,3 +36,7 @@ yarn-error.*
 
 # secrets
 src/
+
+# local env files
+.env
+.env*.local
